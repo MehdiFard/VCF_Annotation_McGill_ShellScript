@@ -1,4 +1,4 @@
-# Answer to skills_test_1-main
+# Answer to skills_test
 A bash script for annotation and filtering VCF files.
 
 ## List of used software tools:
@@ -17,5 +17,5 @@ A bash script for annotation and filtering VCF files.
 ## Compilation instructions
 * No compilation needed.
 
-## To run, execute
+## To run, execute:
      ./bash_script_opt
