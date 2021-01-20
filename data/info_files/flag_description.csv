@@ -1,0 +1,9 @@
+Flag,Number, Type,Description
+AC,1,Integer,Alternate allele count
+AF,1,Float,Alternate allele frequency
+MAF,1,Float,Minor allele frequency
+AN,1,Integer,Total number of alleles
+AVG_DP,1,Float,Average depth
+N_ALT_HET,1,Integer,Number of heterozygous alternate allele carriers
+N_ALT_HOM,1,Integer,Number of homozygous alternate allele carriers
+AVG_DP_P,1,Float,Average depth's percentile value (%)
