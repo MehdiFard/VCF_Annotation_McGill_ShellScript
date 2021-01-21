@@ -52,11 +52,11 @@ sed -n 19p $DIR/merged_qcok.vcf.log; sed -n 21p $DIR/merged_qcok.vcf.log
 
 # Identifing unrelated Individuals
 echo "# Identifing unrelated Individuals, Cutoff threshold for kinship coefficient: < 0.0442 ..."
-./plink2 --vcf $DIR/merged_qcok.vcf.gz --king-cutoff 0.0442 --out $DIR/filter  &>  $LOG/plink_kin.filter.log #/dev/null
+plink2 --vcf $DIR/merged_qcok.vcf.gz --king-cutoff 0.0442 --out $DIR/filter  &>  $LOG/plink_kin.filter.log #/dev/null
 grep -v "IID" $DIR/filter.king.cutoff.in.id > $RES/list_of_unrelated_individuals.txt
 echo "List of unrelated individuals created in $RES directory."
 echo "# Check remained individuals for kinship ..."
-./plink2 --vcf $DIR/merged_qcok.vcf.gz --remove $DIR/filter.king.cutoff.out.id --make-king-table --out $DIR/merged_qc_unrel_kin &> $LOG/plink_kin.table.log  #/dev/null # Making kinship table with unrelated Individuals
+plink2 --vcf $DIR/merged_qcok.vcf.gz --remove $DIR/filter.king.cutoff.out.id --make-king-table --out $DIR/merged_qc_unrel_kin &> $LOG/plink_kin.table.log  #/dev/null # Making kinship table with unrelated Individuals
 Rscript "src/kinship_check _opt_bash.R"
 echo "# Removing related Individulas from merged VCF file"
 bcftools view -S "$RES/list_of_unrelated_individuals.txt" "$DIR/merged_qcok.vcf.gz" | bgzip -c > $DIR/merged_clean.vcf.gz 2> $LOG/filter_related.log
