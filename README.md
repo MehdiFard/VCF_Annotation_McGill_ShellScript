@@ -20,8 +20,8 @@ A bash script for annotation and filtering VCF files.
 ## To run, execute:
      ./bash_script_opt
 ### Expected output
-* A directory called `results` contains output VCFs and a list of unrelated individuals.
-* A directory called `intermediate` contains intermediate files.
-* A directory called `LOG` contains log files.
+* A directory called `results_sh` contains output VCFs and a list of unrelated individuals.
+* A directory called `intermediate_sh` contains intermediate files.
+* A directory called `LOG_sh` contains log files.
 ### Workflow steps
 ![alt text](https://github.com/MehdiFard/Skill_test_McGill_Snakemake/blob/main/DAG.svg?raw=true)
