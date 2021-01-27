@@ -45,7 +45,7 @@ names(AVG_DP_P) <- names(DP_mean_sorted)
 AVG_DP_P <- round(AVG_DP_P[order(match(names(AVG_DP_P), names(DP_mean_unsorted)))], 4) # Average depth's percentile value (AVG_DP_P)
 
 ### Adding New Flags to INFO Fields
-flags <- data.frame(AC=AC, AF=AF, MAF=MAF, AN=AN, AVG_DP=AVG_DP, N_ALT_HET=N_ALT_HET, N_ALT_HOM=N_ALT_HOM, AVG_DP_P) # Making Data fram using calculated flags
+flags <- data.frame(AC=AC, AF=AF, MAF=MAF, AN=AN, AVG_DP=AVG_DP, N_ALT_HET=N_ALT_HET, N_ALT_HOM=N_ALT_HOM, AVG_DP_P=AVG_DP_P) # Making Data fram using calculated flags
 suppressWarnings(info(vcf) <- cbind(info(vcf), flags))# Adding new flags data to existing INFO field data in vcf file. Please ignore the warning message.
 # info(vcf)
 
