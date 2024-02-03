@@ -1,4 +1,4 @@
-# Answer to skills_test
+# VCF_Annotation
 A bash script for annotation and filtering VCF files.
 
 ## List of used software tools:
