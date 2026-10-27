@@ -1,5 +1,5 @@
 # VCF_Annotation
-A bash script for annotation and filtering VCF files.
+A bash script for annotating and filtering VCF files.
 
 ## List of used software tools:
 * R =4.0.3
